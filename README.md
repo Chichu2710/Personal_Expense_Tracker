@@ -1,3 +1,5 @@
+
+```md
 # 💰 Personal Expense Tracker
 
 A full-stack web application built to manage and analyze personal expenses efficiently. The application allows users to add, edit, delete, search, import CSV files, and export expense records with data stored in a MySQL database.
@@ -33,3 +35,87 @@ The project uses Flask as the backend framework and Pandas for data processing t
 
 
 ## 📂 Project Structure
+
+```
+
+Personal_Expense_Tracker
+
+│── app.py
+│── database.py
+│── models.py
+│── forms.py
+│── config.py
+│── requirements.txt
+│── database.sql
+
+│── templates/
+│     ├── index.html
+│     ├── edit.html
+│     └── import.html
+
+│── static/
+└── style.css
+
+````
+
+
+## ⚙️ Installation & Setup
+
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Chichu2710/Personal_Expense_Tracker.git
+````
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Database Setup
+
+1. Start Apache and MySQL from XAMPP
+2. Open phpMyAdmin
+3. Run the `database.sql` file
+
+### Run Application
+
+```bash
+python app.py
+```
+
+Open in browser:
+
+```
+http://127.0.0.1:5000
+```
+
+## 📊 CSV Import Format
+
+CSV file should contain:
+
+```
+title,amount,category,date
+
+Groceries,450,Food,2026-01-02
+Fuel,2000,Transport,2026-01-10
+```
+
+## 🔮 Future Improvements
+
+* User authentication
+* Expense charts and visual analytics
+* Monthly reports
+* PDF export
+* Cloud deployment
+
+## 👨‍💻 Author
+
+**Meet Changani**
+
+B.Tech Artificial Intelligence and Data Science
+A.D. Patel Institute of Technology
+
+
