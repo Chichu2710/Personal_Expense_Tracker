@@ -37,7 +37,6 @@ The project uses Flask as the backend framework and Pandas for data processing t
 ```
 ```
 ## 📂 Project Structure
-Personal_Expense_Tracker/
 
 ├── app.py
 ├── database.py
