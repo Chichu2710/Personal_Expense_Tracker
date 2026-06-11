@@ -33,29 +33,30 @@ The project uses Flask as the backend framework and Pandas for data processing t
 - WTForms
 
 
-## 📂 Project Structure
 
 ```
 ## 📂 Project Structure
 
-
+```text
 Personal_Expense_Tracker/
 │
-├── app.py # Main Flask application
-├── database.py # MySQL database connection
-├── models.py # Database operations and Pandas analysis
-├── forms.py # Form validation
-├── config.py # Application configuration
-├── requirements.txt # Required Python packages
-├── database.sql # Database setup script
+├── app.py                 # Main Flask application
+├── database.py            # MySQL database connection
+├── models.py              # Database operations and Pandas analysis
+├── forms.py               # Form validation
+├── config.py              # Application configuration
+├── requirements.txt       # Required Python packages
+├── database.sql            # Database setup script
 │
-├── templates/ # HTML files
-│ ├── index.html
-│ ├── edit.html
-│ └── import.html
+├── templates/             # HTML files
+│   ├── index.html
+│   ├── edit.html
+│   └── import.html
 │
-└── static/ # CSS and frontend files
-└── style.css
+└── static/                # CSS and frontend files
+    └── style.css
+```
+
 ````
 
 
