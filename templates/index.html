@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+
+            <h1>💰 Personal Expense Tracker</h1>
+
+            <div class="top-buttons">
+
+                <a class="add-btn" href="/add">
+
+                    ➕ Add Expense
+                    
+                </a>
+
+                <a class="export-btn" href="/export">
+
+                    📄 Export CSV
+
+                </a>
+
+                <a class="import-btn" href="/import">
+
+                    📂 Import CSV
+
+                </a>
+
+            </div>
+
+        </header>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Spending</h3>
+                <h2>
+
+                    ₹{{total}}
+
+                </h2>
+            </div>
+
+            <div class="card">
+                <h3>Categories</h3>
+                <h2>
+                    {{category_data|length}}
+                </h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Records</h3>
+                <h2>
+                    {{expenses|length}}
+                </h2>
+            </div>
+        </div>
+
+        <div class="search">
+            <form>
+                <input name="query" placeholder="Search expense...">
+                <button>
+                    Search
+                </button>
+            </form>
+
+            <a class="export" href="/export">
+                Export CSV
+            </a>
+
+        </div>
+
+        <div class="table-box">
+
+            <h2>
+                Expense History
+            </h2>
+
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+                {% for e in expenses %}
+                <tr>
+                    <td>{{e.title}}</td>
+                    <td class="money">
+
+                        ₹{{e.amount}}
+
+                    </td>
+
+                    <td>
+                        <span class="tag">
+
+                            {{e.category}}
+
+                        </span>
+                    </td>
+
+                    <td>
+
+                        {{e.date}}
+
+                    </td>
+
+                    <td>
+                        <a class="edit" href="/edit/{{e.id}}">
+                            
+                            Edit
+
+                        </a>
+
+                        <a class="delete" href="/delete/{{e.id}}">
+
+                            Delete
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="analysis">
+
+            <h2>
+                Category Analysis
+            </h2>
+
+            {% for c,v in category_data.items() %}
+
+            <div class="progress-box">
+                <p>
+                    {{c}}
+                    <b>
+
+                        ₹{{v}}
+
+                    </b>
+                </p>
+
+                <div class="bar">
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</body>
+</html>

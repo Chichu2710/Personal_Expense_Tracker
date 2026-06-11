@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Import Expenses</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="upload-container">
+
+    <h1>📂 Import Expense Data</h1>
+
+    <p>Upload a CSV file containing your expense records</p>
+
+    <form method="POST" enctype="multipart/form-data" id="uploadForm">
+
+        <label class="drop-zone" id="dropZone">
+
+            <input
+                type="file"
+                name="file"
+                id="fileInput"
+                accept=".csv"
+                hidden
+                required
+            >
+
+            <div class="upload-content">
+
+                <h2>⬆️ Drag & Drop CSV Here</h2>
+
+                <p>or click to browse files</p>
+
+                <span id="fileName">
+                    No file selected
+                </span>
+
+            </div>
+
+        </label>
+
+        <button type="submit" class="upload-btn">
+            Import CSV
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+
+const dropZone = document.getElementById("dropZone");
+const fileInput = document.getElementById("fileInput");
+const fileName = document.getElementById("fileName");
+
+fileInput.addEventListener("change", function() {
+
+    if(this.files.length){
+
+        fileName.textContent = this.files[0].name;
+
+    }
+
+});
+
+dropZone.addEventListener("dragover", (e)=>{
+
+    e.preventDefault();
+
+    dropZone.classList.add("drag-active");
+
+});
+
+dropZone.addEventListener("dragleave", ()=>{
+
+    dropZone.classList.remove("drag-active");
+
+});
+
+dropZone.addEventListener("drop", (e)=>{
+
+    e.preventDefault();
+
+    dropZone.classList.remove("drag-active");
+
+    fileInput.files = e.dataTransfer.files;
+
+    fileName.textContent =
+        e.dataTransfer.files[0].name;
+
+});
+
+</script>
+
+</body>
+</html>
