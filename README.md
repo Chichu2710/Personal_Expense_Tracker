@@ -36,25 +36,26 @@ The project uses Flask as the backend framework and Pandas for data processing t
 ## 📂 Project Structure
 
 ```
+## 📂 Project Structure
 
-Personal_Expense_Tracker
 
-│── app.py
-│── database.py
-│── models.py
-│── forms.py
-│── config.py
-│── requirements.txt
-│── database.sql
-
-│── templates/
-│     ├── index.html
-│     ├── edit.html
-│     └── import.html
-
-│── static/
+Personal_Expense_Tracker/
+│
+├── app.py # Main Flask application
+├── database.py # MySQL database connection
+├── models.py # Database operations and Pandas analysis
+├── forms.py # Form validation
+├── config.py # Application configuration
+├── requirements.txt # Required Python packages
+├── database.sql # Database setup script
+│
+├── templates/ # HTML files
+│ ├── index.html
+│ ├── edit.html
+│ └── import.html
+│
+└── static/ # CSS and frontend files
 └── style.css
-
 ````
 
 
