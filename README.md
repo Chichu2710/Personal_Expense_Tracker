@@ -116,5 +116,3 @@ Fuel,2000,Transport,2026-01-10
 
 **Meet Changani**
 
-B.Tech Artificial Intelligence and Data Science
-A.D. Patel Institute of Technology
