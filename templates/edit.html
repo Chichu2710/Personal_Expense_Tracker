@@ -1,86 +1,49 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-
-<title>
-Expense
-</title>
-
-
-<link rel="stylesheet" href="/static/style.css">
-
-
+    <title>
+        Expense
+    </title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 
-
-
 <body>
+    <div class="form-container">
+        <h1>
+            {{title}}
+        </h1>
 
+        <form method="POST">
+            {{form.hidden_tag()}}
 
-<div class="form-container">
+            <label>
+                Title
+            </label>
 
+            {{form.title()}}
 
-<h1>
+            <label>
+                Amount
+            </label>
 
-{{title}}
+            {{form.amount()}}
 
-</h1>
+            <label>
+                Category
+            </label>
 
+            {{form.category()}}
 
+            <label>
+                Date
+            </label>
 
-<form method="POST">
+            {{form.date()}}
+            {{form.submit(class="save")}}
 
-
-{{form.hidden_tag()}}
-
-
-
-<label>
-Title
-</label>
-
-{{form.title()}}
-
-
-
-<label>
-Amount
-</label>
-
-{{form.amount()}}
-
-
-
-<label>
-Category
-</label>
-
-{{form.category()}}
-
-
-
-<label>
-Date
-</label>
-
-{{form.date()}}
-
-
-
-{{form.submit(class="save")}}
-
-
-
-
-
-</form>
-
-
-</div>
-
-
+        </form>
+    </div>
 </body>
 
 </html>
