@@ -1,0 +1,6 @@
+Flask
+mysql-connector-python
+pandas
+Flask-WTF
+WTForms
+python-dotenv
